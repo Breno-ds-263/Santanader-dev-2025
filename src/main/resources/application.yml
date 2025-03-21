@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb # URL padrão do H2
+    username: sa # Usuário padrão do H2
+    password: # Senha padrão do H2 (nenhuma senha)
+    driverClassName: org.h2.Driver
+    database-platform: org.hibernate.dialect.H2Dialect
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console # Caminho padrão para acessar o console do H2
+      settings:
+        trace: false
+        web-allow-others: false
